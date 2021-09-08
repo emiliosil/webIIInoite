@@ -24,7 +24,7 @@ public class Main {
 		prod1.quantidade = "300";
 		prod1.valor = "9,000";
 		
-		System.out.printf("O senhor %s que reside no endereço %s nº %s, no bairro %s - %s/%s, comprou o produto de nome %, de cor %s, quantidade %s e valor %s",clie1.nome,end1.rua,end1.numero,end1.bairro,end1.cidade,end1.estado,prod1.nomeDoProduto,prod1.corDoProduto,prod1.quantidade,prod1.valor);
+		System.out.printf("O senhor %s que reside no endereço %s nº %s, no bairro %s - %s/%s, comprou o produto de nome %s, de cor %s, quantidade %s e valor %s",clie1.nome,end1.rua,end1.numero,end1.bairro,end1.cidade,end1.estado,prod1.nomeDoProduto,prod1.corDoProduto,prod1.quantidade,prod1.valor);
 	}
 
 }
