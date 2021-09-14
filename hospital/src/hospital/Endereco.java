@@ -62,4 +62,9 @@ public class Endereco {
 	public void setCEP(String CEP) {
 		this.cep = CEP;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Logradouro : %s nº %s, bairro %s - %s/%s", this.rua,this.numero,this.bairro,this.cidade,this.estado);
+	}
 }

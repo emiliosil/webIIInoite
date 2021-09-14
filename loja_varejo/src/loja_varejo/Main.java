@@ -3,28 +3,13 @@ package loja_varejo;
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente clie1 = new Cliente();
-		Endereco end1 = new Endereco();
-		Produto prod1 = new Produto();
+		Endereco end1 = new Endereco("Rua dos Uchiha","333","Uchiha","Konoha","País do Fogo");
+		Cliente clie1 = new Cliente("Sasuke uchiha","9090909",end1);
+//		Produto prod1 = new Produto("kunai","9,000","300","Prata Avermelhado");
+
+//		System.out.printf("O senhor %s que reside no endereço %s nº %s, no bairro %s - %s/%s, comprou o produto de nome %s, de cor %s, quantidade %s e valor %s",clie1.getNome(),end1.getRua(),end1.getNumero(),end1.getBairro(),end1.getCidade(),end1.getEstado(),prod1.getNomeDoProduto(),prod1.getCorDoProduto(),prod1.getQuantidade(),prod1.getValor());
 		
-		clie1.nome = "Sasuke Uchiha";
-		clie1.telefonePessoal = "9090909";
-		clie1.email = "UchihaSasuke333@folha.com";
-		clie1.endereco = end1;
-		
-		end1.estado = "País do Fogo";
-		end1.cidade = "Konoha";
-		end1.bairro = "Uchiha";
-		end1.rua = "Rua dos Uchiha";
-		end1.numero = "333";
-		end1.cep = "333000333";
-		
-		prod1.nomeDoProduto = "kunai";
-		prod1.corDoProduto = "Prata Avermelhado";
-		prod1.quantidade = "300";
-		prod1.valor = "9,000";
-		
-		System.out.printf("O senhor %s que reside no endereço %s nº %s, no bairro %s - %s/%s, comprou o produto de nome %s, de cor %s, quantidade %s e valor %s",clie1.nome,end1.rua,end1.numero,end1.bairro,end1.cidade,end1.estado,prod1.nomeDoProduto,prod1.corDoProduto,prod1.quantidade,prod1.valor);
+		System.out.println(clie1.toString());
 	}
 
 }

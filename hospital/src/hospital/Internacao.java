@@ -1,6 +1,7 @@
 package hospital;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Internacao {
 	private Medico medico;
@@ -47,12 +48,25 @@ public class Internacao {
 		this.dataAlta = dataAlta;
 	}
 	
-	public String dadosDoMedico() {
-		StringBuilder dados = new StringBuilder();
-		dados.append("Nome do médico: ");
-		dados.append(this.medico.getNomeCompleto());
-		dados.append("\tTelefone para contatos: ");
-		dados.append(this.medico.getTelefoneContato());
-		return dados.toString();
+//	public String dadosDoMedico() {
+//		StringBuilder dados = new StringBuilder();
+//		dados.append("Nome do médico: ");
+//		dados.append(this.medico.getNomeCompleto());
+//		dados.append("\tTelefone para contatos: ");
+//		dados.append(this.medico.getTelefoneContato());
+//		return dados.toString();
+//	}
+	
+	private String formatarData(LocalDate data) {
+		if(data != null) {
+			var formato = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+			return formato.format(data);
+		}
+		return "Data não informada!!!";
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("Dados do médico: \n%s\nDados do paciente: \n%sData da internação: %s\nData da alta: %s\nObservações: \n%s",this.medico.toString(),this.paciente.toString(),this.formatarData(this.dataInternacao),this.formatarData(this.dataAlta),this.observacoes);
 	}
 }

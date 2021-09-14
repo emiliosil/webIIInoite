@@ -36,4 +36,9 @@ public class Paciente {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Nome completo: %s\tTelefone: %s\tEndereço: %s",this.nomeCompleto,this.telefone,this.endereco.toString());
+	}
 }

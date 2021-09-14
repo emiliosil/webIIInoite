@@ -30,4 +30,8 @@ public class Medico {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	@Override
+	public String toString() {
+		return String.format("CRM: %s\tNome: %s\tTelefone: %s\tEndereço: %s",this.crm,this.nomeCompleto,this.telefoneContato,this.endereco.toString());
+	}
 }
