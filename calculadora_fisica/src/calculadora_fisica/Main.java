@@ -3,38 +3,38 @@ package calculadora_fisica;
 import java.util.Scanner;
 
 public class Main {
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub 
 		Scanner teclado = new Scanner(System.in);
 		Forca_centripeta for1 = new Forca_centripeta();
 		Forca_peso for2 = new Forca_peso();
-		movimentoretilinio mr1 = new movimentoretilinio();
-		Velocidade_media vm1 = new Velocidade_media();
-	
-		System.out.println("digite a massa :");
+		Movimento_retilinio mru1 = new Movimento_retilinio();
+		Velocidade_media vlm1 = new Velocidade_media();
+		
+		System.out.println("Digite a massa: ");
 		for1.massa = teclado.nextLine();
-		System.out.println("digite o peso:");
-		for1.pesso = teclado.nextLine();
-		System.out.println("digite o raio:");
+		System.out.println("Digite o peso: ");
+		for1.peso = teclado.nextLine();
+		System.out.println("Digite o raio: ");
 		for1.raio = teclado.nextLine();
 		
-		System.out.println("digite a massa:");
-		for2.masssa = teclado.nextLine();
-		System.out.println("digite o peso:");
-		for2.pesso = teclado.nextLine();
-		System.out.println("digite o velocidade:");
+		System.out.println("Digite a massa: ");
+		for2.massa = teclado.nextLine();
+		System.out.println("Digite o peso: ");
+		for2.peso = teclado.nextLine();
 		
-		mr1.velocidade = teclado.nextLine();
-		System.out.println("digite o tempo:");
-		mr1.tempo = teclado.nextLine();
+		System.out.println("Digite a velocidade: ");
+		mru1.velocidade = teclado.nextLine();
+		System.out.println("Digite o tempo: ");
+		mru1.tempo = teclado.nextLine();
 		
-		System.out.println("digite a velocidade inicial:");
-		vm1.velocidadeinicial = teclado.nextLine();
-		System.out.println("digite a velocidade final:");
-		vm1.velicidadefinal = teclado.nextLine();
+		System.out.println("Digite a velocidade inicial: ");
+		vlm1.velocidadeInicial = teclado.nextLine();
+		System.out.println("Digite a velocidade final: ");
+		vlm1.velocidadeFinal = teclado.nextLine();
 		teclado.close();
 		
-		System.out.printf(calculodopeso);
+		System.out.printf(calculadora_fisica);
 	}
 
 }
