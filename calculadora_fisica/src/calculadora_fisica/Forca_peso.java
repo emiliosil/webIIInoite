@@ -1,13 +1,11 @@
 package calculadora_fisica;
 
 public class Forca_peso {
-	public String massa;
-	public String peso;
+	public float massa;
+	public float peso;
 	
-	public String Forca_centripeta(String massa,String peso,String raio) {
-		String Forca_peso = "this.massa * this.peso";
-	}{
-		return String massa*peso;
+	public float for2(float massa,float peso) {
+		return massa*peso;
 	}
 }
 //massa*peso

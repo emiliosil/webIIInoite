@@ -12,29 +12,32 @@ public class Main {
 		Velocidade_media vlm1 = new Velocidade_media();
 		
 		System.out.println("Digite a massa: ");
-		for1.massa = teclado.nextLine();
+		for1.massa = teclado.nextFloat();
 		System.out.println("Digite o peso: ");
-		for1.peso = teclado.nextLine();
+		for1.peso = teclado.nextFloat();
 		System.out.println("Digite o raio: ");
-		for1.raio = teclado.nextLine();
+		for1.raio = teclado.nextFloat();
 		
 		System.out.println("Digite a massa: ");
-		for2.massa = teclado.nextLine();
+		for2.massa = teclado.nextFloat();
 		System.out.println("Digite o peso: ");
-		for2.peso = teclado.nextLine();
+		for2.peso = teclado.nextFloat();
 		
 		System.out.println("Digite a velocidade: ");
-		mru1.velocidade = teclado.nextLine();
+		mru1.velocidade = teclado.nextFloat();
 		System.out.println("Digite o tempo: ");
-		mru1.tempo = teclado.nextLine();
+		mru1.tempo = teclado.nextFloat();
 		
 		System.out.println("Digite a velocidade inicial: ");
-		vlm1.velocidadeInicial = teclado.nextLine();
+		vlm1.velocidadeInicial = teclado.nextFloat();
 		System.out.println("Digite a velocidade final: ");
-		vlm1.velocidadeFinal = teclado.nextLine();
+		vlm1.velocidadeFinal = teclado.nextFloat();
 		teclado.close();
 		
-		System.out.printf(calculadora_fisica);
+		System.out.print(for1);
+		System.out.print(for2);
+		System.out.print(mru1);
+		System.out.print(vlm1);
 	}
 
 }

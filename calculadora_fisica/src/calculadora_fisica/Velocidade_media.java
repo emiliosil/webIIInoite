@@ -1,13 +1,11 @@
 package calculadora_fisica;
 
 public class Velocidade_media {
-	public String velocidadeFinal;
-	public String velocidadeInicial;
+	public float velocidadeFinal;
+	public float velocidadeInicial;
 	
-	public String Forca_centripeta(String massa,String peso,String raio) {
-		String Velocidade_media = "this.velocidadeFinal - this.velocidadeInicial";
-	}{
-		return String Velocidade_media;
+	public float vlm1(float velocidadeFinal,float velocidadeInicial) {
+		return velocidadeFinal-velocidadeInicial;
 	}
 }
 //velocidade final - velocidade inicial

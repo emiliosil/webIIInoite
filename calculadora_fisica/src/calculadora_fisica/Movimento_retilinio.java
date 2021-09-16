@@ -1,13 +1,11 @@
 package calculadora_fisica;
 
 public class Movimento_retilinio {
-	public String velocidade;
-	public String tempo;
+	public float velocidade;
+	public float tempo;
 	
-	public String Forca_centripeta(String massa,String peso,String raio) {
-		String Movimento_retilinio = "this.velocidade + this.tempo";
-	}{
-		return String Movimento_retilinio;
+	public float mru1(float velocidade,float tempo) {
+		return velocidade+tempo;
 	}
 }
 //velocidade+tempo
