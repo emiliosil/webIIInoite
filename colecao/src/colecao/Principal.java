@@ -30,10 +30,38 @@ public class Principal {
 		boolean localizado = alunos.contains("josé");
 		
 		if(localizado) {
-			System.out.println("Foi localizado na lista");
+			System.out.println("");
+//			System.out.println("%s foi localizado(a) na posição %d da lista de alunos");
+			System.out.println("Mari é o(a) 2º aluno(a) da lista");
 		}else {
 			System.out.println("Não foi localizado na lista");
 		}
+		
+		// Remoção de elementos
+		int indiceRemocao = alunos.indexOf("Maria");
+		alunos.remove(1);// Remover a Maria
+		System.out.println(alunos.toString());
+		
+		alunos.removeIf((nome)->nome.startsWith("Mar"));
+		
+		System.out.println(alunos.toString());
+		
+		// --------------------------------------------------
+		
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		// Adicionar os Números
+		
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		numeros.add(5);
+		System.out.println(numeros.toString());
+		
+		// num % 2 == 0 Logo é par
+		numeros.removeIf((num) -> num % 2 != 0);
+		
+		System.out.println(numeros.toString());
 	}
 
 }
