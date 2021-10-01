@@ -12,6 +12,10 @@ public class Medico {
 		this.telefoneContato = telefoneContato;
 	}
 	
+	public Medico(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
+	}
+	
 	public String getCrm() {
 		return crm;
 	}

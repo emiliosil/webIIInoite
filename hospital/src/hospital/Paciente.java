@@ -15,6 +15,11 @@ public class Paciente {
 		this.endereco = endereco;
 		}
 	
+	public Paciente(String cpf) {
+		super();
+		this.cpf = cpf;
+		}
+	
 	public String getNomeCompleto() {
 		return nomeCompleto;
 	}

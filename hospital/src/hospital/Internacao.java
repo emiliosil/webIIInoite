@@ -16,9 +16,7 @@ public class Internacao {
 		this.dataInternacao = LocalDate.now();
 	}
 	
-	public Internacao(Paciente paciente,Medico medico,LocalDate datadeInternacao) {
-		this.paciente = paciente;
-		this.medico = medico;
+	public Internacao(LocalDate datadeInternacao) {
 		this.dataInternacao = dataInternacao;
 	}
 	

@@ -31,7 +31,7 @@ public class Principal {
 //		System.out.println(gerentes.listar());
 //		
 		//--------------------------------------------//
-		
+//		
 //		listaDeCliente clientes = new listaDeCliente();
 //		
 //		Cliente paula = new Cliente("0101","Paula");
@@ -52,6 +52,7 @@ public class Principal {
 //		clientes.remover(mauro);
 //		
 //		System.out.println(clientes.listar());
+//		
 		//--------------------------------------------//
 		
 		listaDeConta banco = new listaDeConta();
