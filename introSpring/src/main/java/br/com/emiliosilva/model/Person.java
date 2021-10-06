@@ -5,10 +5,10 @@ import java.time.LocalDate;
 public class Person {
 	private String name;
 	private String lastName;
-	private LocalDate birthDay;
+	private String birthDay;
 	private String email;
 	
-	public Person(String name, String lastName, LocalDate birthDay, String email) {
+	public Person(String name, String lastName, String birthDay, String email) {
 		this.name = name;
 		this.lastName = lastName;
 		this.birthDay = birthDay;
@@ -23,7 +23,7 @@ public class Person {
 		return lastName;
 	}
 
-	public LocalDate getBirthDay() {
+	public String getBirthDay() {
 		return birthDay;
 	}
 
