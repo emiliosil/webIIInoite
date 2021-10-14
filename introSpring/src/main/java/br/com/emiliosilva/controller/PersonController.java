@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class PersonController {
 	private PersonService personService;
 
 	PersonController() {
+		List<Person> listOfPersons = null;
 		listOfPersons.add(
 				new Person("Emílio","Silva","03/03/2006","emiliosilva@gmail.com")
 		);
@@ -49,22 +51,24 @@ public class PersonController {
 	}
 	
 	@PostMapping
-	public Map<String, String> insert(@RequestBody Person person) {
+	public Map<String, String> insert1(@RequestBody Person person) {
 		return personService.insert(person);
 	}
 	
 	@PutMapping
-	public Map<String,String> edit(@RequestBody Person person) {
+	public Map<String,String> edit1(@RequestBody Person person) {
 		return personService.edit(person);
 	}
 
 	@DeleteMapping
-	public Map<String,String> remove(@PathVariable String name) {
+	public Map<String,String> remove1(@PathVariable String name) {
 	return personService.remove(name);
+	}
 
 	@PostMapping
 	public Map<String, String> insert(@RequestBody Person person) {
 		Map<String,String> result = new HashMap<String,String>();
+		List<Person> listOfPersons = null;
 		boolean isSuccess = listOfPersons.add(person);
 		if(isSuccess) {
 			result.put("result", "Pessoa cadastrada com sucesso!!!");
@@ -78,6 +82,7 @@ public class PersonController {
 	public Map<String,String> edit(@RequestBody Person person) {
 		Map<String,String> result = new HashMap<String,String>();
 		
+		List<Person> listOfPersons = null;
 		for(Person element: listOfPersons) {
 			if(element.getName().equalsIgnoreCase(person.getName())) {
 				int index = listOfPersons.indexOf(element);
@@ -93,6 +98,7 @@ public class PersonController {
 	@DeleteMapping
 	public Map<String,String> remove(@PathVariable String name) {
 		Map<String,String> result = new HashMap<String,String>();
+		Collection<Person> listOfPersons = null;
 		boolean isSuccess = listOfPersons.removeIf(
 				(person)->person.getName().equalsIgnoreCase(name)
 		);
