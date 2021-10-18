@@ -38,7 +38,7 @@ public class BookController {
 	
 	@GetMapping
 	public List<Book> findAll() {
-		return bookSrevice.findAll();
+		return bookService.findAll();
 	}
 	
 	@GetMapping("{/id}")

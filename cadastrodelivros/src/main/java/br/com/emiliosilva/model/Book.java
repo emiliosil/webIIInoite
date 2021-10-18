@@ -13,7 +13,7 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(length = 11,nullable = false)
+	@Column(length = 11,nullable = false,unique = true)
 	private String ISBN;
 	@Column(length = 50,nullable = false)
 	private String title;
