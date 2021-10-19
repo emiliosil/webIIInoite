@@ -33,7 +33,7 @@ public class OnePieceController {
 	
 	@PutMapping
 	public OnePiece update(@RequestBody OnePiece onePiece) {
-		return onePiece.insertOrUpdate(onePiece);
+		return onePieceService.insertOrUpdate(onePiece);
 	}
 	
 	@GetMapping
