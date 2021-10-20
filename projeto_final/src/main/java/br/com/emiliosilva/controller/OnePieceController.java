@@ -24,11 +24,7 @@ public class OnePieceController {
 	
 	@PostMapping
 	public OnePiece insert(@RequestBody OnePiece onePiece) {
-		try {
 			return onePieceService.insertOrUpdate(onePiece);
-		}catch (Exception e) {
-			return null;
-		}
 	}
 	
 	@PutMapping
@@ -41,7 +37,7 @@ public class OnePieceController {
 		return onePieceService.findAll();
 	}
 	
-	@GetMapping("{/id}")
+	@GetMapping("/{id}")
 	public Optional<OnePiece> findOne(@PathVariable int id) {
 		return onePieceService.findOne(id);
 	}

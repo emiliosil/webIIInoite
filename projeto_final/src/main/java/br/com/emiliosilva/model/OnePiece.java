@@ -13,21 +13,21 @@ public class OnePiece {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(length = 11,nullable = false,unique = true)
-	private String ISBN;
-	@Column(length = 50,nullable = false)
-	private String title;
-	@Column(length = 70,nullable = false)
-	private String author;
+	@Column(length = 100,nullable = false,unique = true)
+	private String name;
 	@Column(length = 100,nullable = false)
-	private String publishingCompany;
+	private String reward;
+	@Column(length = 100,nullable = false)
+	private String pirateGang;
+	@Column(length = 100,nullable = false)
+	private String position;
 	
-	public OnePiece(int id, String iSBN, String title, String author, String publishingCompany) {
+	public OnePiece(int id, String name, String reward, String pirateGang, String position) {
 		this.id = id;
-		ISBN = iSBN;
-		this.title = title;
-		this.author = author;
-		this.publishingCompany = publishingCompany;
+		this.name = name;
+		this.reward = reward;
+		this.pirateGang = pirateGang;
+		this.position = position;
 	}
 	
 	public OnePiece() {
@@ -37,39 +37,39 @@ public class OnePiece {
 		return id;
 	}
 
-	public String getISBN() {
-		return ISBN;
+	public String getName() {
+		return name;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getReward() {
+		return reward;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getPirateGang() {
+		return pirateGang;
 	}
-
-	public String getPublishingCompany() {
-		return publishingCompany;
+	
+	public String getPosition() {
+		return position;
 	}
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setReward(String reward) {
+		this.reward = reward;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setPirateGang(String pirateGang) {
+		this.pirateGang = pirateGang;
 	}
-
-	public void setPublishingCompany(String publishingCompany) {
-		this.publishingCompany = publishingCompany;
+	
+	public void setPosition(String position) {
+		this.position = position;
 	}
 }
